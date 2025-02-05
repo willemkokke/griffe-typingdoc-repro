@@ -12,12 +12,17 @@ theme:
         icon: material/toggle-switch-off
         name: Switch to light mode
 
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+
 plugins:
   - mkdocstrings:
       handlers:
         python:
           paths: ["."]
-          inventories:
+          import:
             - https://docs.python.org/3/objects.inv
 
           options:
