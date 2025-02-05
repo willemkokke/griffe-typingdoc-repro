@@ -1,0 +1,39 @@
+site_name: My Docs
+
+theme:
+  name: material
+
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]
+          inventories:
+            - https://docs.python.org/3/objects.inv
+
+          options:
+            docstring_style: google
+            show_inheritance_diagram: true
+            show_if_no_docstring: true
+            allow_inspection: true
+            show_root_heading: true
+            show_root_full_path: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            modernize_annotations: true
+            separate_signature: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+            unwrap_annotated: true
+
+            extensions:
+              - griffe_typingdoc

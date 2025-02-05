@@ -1,0 +1,16 @@
+[project]
+name = "griffe-typingdoc-repro"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "griffe-typingdoc>=0.2.7",
+    "mkdocs-material>=9.6.2",
+    "mkdocstrings>=0.28.0",
+    "mkdocstrings-python>=1.14.4",
+    "pydantic>=2.10.6",
+]
